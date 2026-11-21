@@ -1,0 +1,37 @@
+{
+  "name": "invest-trading-platform",
+  "version": "1.0.0",
+  "description": "A comprehensive online trading platform similar to Moomoo and Futu",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && npm start",
+    "mobile:dev": "cd mobile && npm start",
+    "build": "npm run client:build && npm run server:build",
+    "client:build": "cd client && npm run build",
+    "server:build": "cd server && npm run build",
+    "start": "cd server && npm start",
+    "test": "npm run server:test && npm run client:test",
+    "server:test": "cd server && npm test",
+    "client:test": "cd client && npm test"
+  },
+  "keywords": [
+    "trading",
+    "stocks",
+    "investment",
+    "fintech",
+    "real-time",
+    "mobile-app"
+  ],
+  "author": "Invest Platform Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "server",
+    "client",
+    "mobile"
+  ]
+}
